@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Histoire | De l'Ombre à la Lumière</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --primary-emerald: #50c878;
+            --text-light: #f4f4f4;
+            --accent-soft: rgba(80, 200, 120, 0.1);
+            --profile-size: 180px; /* Taille généreuse pour la photo */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-emerald);
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a2e23 0%, #0a0a0a 70%);
+            padding-bottom: 60px;
+        }
+
+        .hero-profile-container {
+            width: var(--profile-size);
+            height: var(--profile-size);
+            border-radius: 50%;
+            border: 4px solid var(--primary-emerald);
+            box-shadow: 0 0 35px rgba(80, 200, 120, 0.6);
+            overflow: hidden;
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-profile-container:hover {
+            transform: scale(1.03);
+        }
+
+        .hero-profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            letter-spacing: -1.5px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.85;
+            max-width: 650px;
+            font-weight: 300;
+        }
+
+        /* --- STORY SECTION --- */
+        .story-section {
+            padding: 120px 0 80px 0;
+            border-left: 2px solid var(--primary-emerald);
+            margin-left: 30px;
+            padding-left: 50px;
+        }
+
+        .story-block {
+            margin-bottom: 70px;
+            position: relative;
+        }
+
+        .story-block::before {
+            content: '';
+            position: absolute;
+            left: -60px;
+            top: 12px;
+            width: 18px;
+            height: 18px;
+            background: var(--primary-emerald);
+            border-radius: 50%;
+            box-shadow: 0 0 18px var(--primary-emerald);
+        }
+
+        .story-block p {
+            font-size: 1.15rem;
+            margin-top: 15px;
+            color: rgba(244, 244, 244, 0.9);
+        }
+
+        .highlight {
+            color: var(--primary-emerald);
+            font-weight: 600;
+            background: rgba(80, 200, 120, 0.1);
+            padding: 0 4px;
+            border-radius: 3px;
+        }
+
+        /* --- CARDS & GRID --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+            margin-bottom: 80px;
+        }
+
+        .card {
+            background: rgba(26, 26, 26, 0.5);
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid rgba(80, 200, 120, 0.15);
+            transiti
